@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 15:29:46 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/02/26 18:11:04 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/02/26 23:27:27 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Zombie {
 
 	private:
 
-		std::string	name;
+		std::string	_name;
 
 };
 
