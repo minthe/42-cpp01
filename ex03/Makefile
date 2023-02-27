@@ -1,8 +1,8 @@
-NAME = moar_brainz
+NAME = unnecessary_violence
 
 CC = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -g
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS_PATH = $(PWD)
 

@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 15:29:07 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/02/26 23:52:11 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/02/27 11:47:09 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Zombie::Zombie() {
 
 Zombie::~Zombie()
 {
-	std::cout << "Zombie: " << this->_name << this->_nbZombie << " destroyed." << std::endl;
+	std::cout << this->_name << this->_nbZombie << " destroyed." << std::endl;
 	return;
 }
 

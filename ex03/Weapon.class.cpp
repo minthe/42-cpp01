@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   Weapon.class.cpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/26 17:15:08 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/02/27 18:50:57 by vfuhlenb         ###   ########.fr       */
+/*   Created: 2023/02/27 14:15:59 by vfuhlenb          #+#    #+#             */
+/*   Updated: 2023/02/27 16:43:56 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.class.hpp"
+#include "Weapon.class.hpp"
+#include <iostream>
 
-Zombie*	newZombie(std::string name)
+Weapon::Weapon(std::string newType) : _type(newType) {}
+Weapon::~Weapon() {}
+
+std::string	Weapon::getType()
 {
-	Zombie*	newZombie = new Zombie(name);
+	std::string&	typeREF = this->_type;
+	return (typeREF);
+}
 
-	newZombie->announce();
-	return (newZombie);
+void	Weapon::setType(std::string newType)
+{
+	this->_type = newType;
+	return;
 }

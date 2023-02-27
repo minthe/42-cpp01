@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 15:29:46 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/02/26 23:52:13 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/02/27 18:41:15 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <iostream>
 
 class Zombie {
+
 	public:
 
 		Zombie();

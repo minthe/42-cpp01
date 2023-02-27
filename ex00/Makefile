@@ -21,7 +21,7 @@ OBJS = $(SRCS:.cpp=.o)
 
 $(NAME): $(OBJS)
 	@$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
-	@echo "\033[32mprogram\033[32;1m ./$(NAME) \033[0m\033[32mcompiled\033[0m"
+	@echo "program\033[32;1m ./$(NAME) \033[0mcompiled"
 
 all: $(NAME)
 

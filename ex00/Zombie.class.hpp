@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 15:29:46 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/02/26 23:27:27 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/02/27 19:03:59 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,17 @@
 #include <iostream>
 
 class Zombie {
+
 	public:
 
-		Zombie();
+		Zombie(std::string name);
 		~Zombie();
 
-		void	setName(std::string name);
 		void	announce() const;
 
 	private:
 
-		std::string	_name;
+		const std::string	_name;
 
 };
 

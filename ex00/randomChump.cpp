@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 17:16:43 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/02/26 17:42:48 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/02/27 19:02:26 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 void	randomChump(std::string name)
 {
-	Zombie randomChump;
+	Zombie randomChump(name);
 
-	randomChump.setName(name);
 	randomChump.announce();
 	return;
 }
