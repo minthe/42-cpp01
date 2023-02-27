@@ -1,8 +1,8 @@
-NAME = moar_brainz
+NAME = sed
 
 CC = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -g
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS_PATH = $(PWD)
 
@@ -17,10 +17,10 @@ RM = rm -f
 OBJS = $(SRCS:.cpp=.o)
 
 %.o: %.cpp
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
+	@$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
 	@echo "program\033[32;1m ./$(NAME) \033[0mcompiled"
 
 all: $(NAME)
