@@ -21,16 +21,17 @@ OBJS = $(SRCS:.cpp=.o)
 
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
-	@echo "program\033[32;1m ./$(NAME) \033[0mcompiled"
+	@echo "executable created: \033[32;1m./$(NAME)\033[0m"
 
 all: $(NAME)
 
 clean:
-	@$(RM) $(OBJS)
+	$(RM) $(OBJS)
+	@echo "\033[34mclean success\033[0m"
 
-fclean: clean
-	@$(RM) $(NAME)
-	@echo "\033[32mdirectory cleaned\033[0m"
+fclean:
+	$(RM) $(OBJS) $(NAME)
+	@echo "\033[34mfclean success\033[0m"
 
 re: fclean all
 

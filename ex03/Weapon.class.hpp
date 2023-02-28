@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 14:06:37 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/02/27 16:44:00 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/02/28 15:53:11 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ class Weapon {
 		Weapon(std::string newType);
 		~Weapon();
 
-		std::string		getType();
-		void			setType(std::string newType);
+		std::string	const&	getType();
+		void				setType(std::string newType);
 
 	private:
 
