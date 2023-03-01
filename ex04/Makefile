@@ -6,9 +6,11 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 
 SRCS_PATH = $(PWD)
 
-SRCS_FILES =	$(shell ls ./ | grep .cpp$)
+# SRCS_FILES =	$(shell ls ./ | grep .cpp$)
 
-SRCS = $(addprefix $(SRCS_PATH)/,$(SRCS_FILES))
+# SRCS = $(addprefix $(SRCS_PATH)/,$(SRCS_FILES))
+
+SRCS = main.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
