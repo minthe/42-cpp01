@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 19:24:58 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/03/01 00:57:35 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/03/01 01:00:29 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	main(int argc, char **argv)
 	if (argc != 4)
 		return (error_msg("3 arguments needed: a filename and two strings", ""));
 	file.open(argv[1]);
-	if ((file.rdstate() & std::ifstream::failbit) != 0 )
+	if ((file.rdstate() != 0 || std::ifstream::failbit) != 0 ) // if ((file.rdstate() & std::ifstream::failbit) != 0 )
 		return (error_msg("Error opening: ", argv[1]));
 
 	// read lines until eof
