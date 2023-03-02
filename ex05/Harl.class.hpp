@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 19:29:26 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/03/01 20:30:02 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/03/02 15:16:16 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ class Harl {
 
 	public:
 
+		Harl();
+		~Harl();
 		void	complain(std::string level);
 
 	private:

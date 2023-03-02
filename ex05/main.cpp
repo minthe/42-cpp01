@@ -6,7 +6,16 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 19:46:40 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/03/01 19:46:41 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/03/02 17:23:17 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Harl.class.hpp"
+
+int	main()
+{
+	Harl *h = 0;
+
+	h->complain("debug");
+	return 0;
+}
