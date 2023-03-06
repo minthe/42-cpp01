@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 19:29:26 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/03/02 15:16:16 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/03/06 13:23:55 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ class Harl {
 
 	private:
 
-		void	debug(void);
-		// void	info(void);
-		// void	warning(void);
-		// void	error(void);
+		void	_debug(void);
+		void	_info(void);
+		void	_warning(void);
+		void	_error(void);
 
 };
 
