@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 19:29:27 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/03/06 18:54:50 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/03/06 23:53:13 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,27 +23,34 @@ Harl::~Harl() {
 	return;
 }
 
-void	Harl::complain(std::string level)
+int	Harl::_getLevel(std::string input)
 {
-
-	// declare member function to cmfp pointers
-	debug = &Harl::_debug;
-	info = &Harl::_info;
-	warning = &Harl::_warning;
-	error = &Harl::_error;
-
-	// creating arrays for pointers and string literals
-	void (Harl::*complain[4])(void) = { debug, info, warning, error };
 	std::string levels[4] = { "debug", "info", "warning", "error" };
 
-	// comparing input parameter with pointer array
 	for (int i = 0; i < 4; i++)
-		if (level == levels[i])
+		if (levels[i] == input)
+			return (i);
+	return (-1);
+}
+
+void	Harl::complain(std::string level)
+{
+	switch (this->_getLevel(level))
+	{
+		case -1:
 		{
-			(this->*complain[i])();
-			return;
+			std::cout << "nothing to complain" << std::endl;
+			break;
 		}
-	std::cout << "nothing to complain" << std::endl;
+		case 0:
+			this->_debug();
+		case 1:
+			this->_info();
+		case 2:
+			this->_warning();
+		case 3:
+			this->_error();
+	}
 	return;
 }
 
@@ -68,7 +75,7 @@ void	Harl::_info()
 void	Harl::_warning()
 {
 	std::cout
-		<< "I think I deserve to have some extra bacon for free. I’ve been coming"
+		<< "I think I deserve to have some extra bacon for free. I’ve been coming "
 		<< "for years whereas you started working here since last month."
 	<< std::endl;
 	return;

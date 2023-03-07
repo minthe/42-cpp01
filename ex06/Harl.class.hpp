@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 19:29:26 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/03/06 18:53:49 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/03/06 23:51:27 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,7 @@ class Harl {
 		void	_info(void);
 		void	_warning(void);
 		void	_error(void);
-		void	(Harl::*debug)(void);
-		void	(Harl::*info)(void);
-		void	(Harl::*warning)(void);
-		void	(Harl::*error)(void);
+		int		_getLevel(std::string input);
 
 };
 
