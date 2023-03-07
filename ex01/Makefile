@@ -2,7 +2,7 @@ NAME = moar_brainz
 
 CC = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -g
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS_PATH = $(PWD)
 

@@ -6,12 +6,12 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 19:24:58 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/03/01 23:58:03 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/03/07 18:35:43 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include <fstream>
+#include <iostream>
 #include <sstream>
 
 #define RED "\033[31;1m"
@@ -65,7 +65,8 @@ int	main(int argc, char **argv)
 	// output-file handling
 	new_name = argv[1];
 	new_name.append(".replace");
-	new_file.open(new_name);
+	const char*	new_file2 = new_name.c_str();
+	new_file.open(new_file2);
 	if ((new_file.rdstate() & std::ifstream::failbit) != 0 )
 		return (print_message("Error creating: ", new_name, 1));
 

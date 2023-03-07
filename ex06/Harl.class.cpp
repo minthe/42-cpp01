@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 19:29:27 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/03/06 23:53:13 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/03/07 18:40:59 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,26 @@ void	Harl::complain(std::string level)
 			break;
 		}
 		case 0:
+		{
 			this->_debug();
-		case 1:
 			this->_info();
-		case 2:
 			this->_warning();
+			this->_error();
+			break;
+		}
+		case 1:
+		{
+			this->_info();
+			this->_warning();
+			this->_error();
+			break;
+		}
+		case 2:
+		{
+			this->_warning();
+			this->_error();
+			break;
+		}
 		case 3:
 			this->_error();
 	}
