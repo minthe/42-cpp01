@@ -4,13 +4,9 @@ CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS_PATH = $(PWD)
-
-SRCS_FILES =	$(shell ls ./ | grep .cpp$)
-
-SRCS = $(addprefix $(SRCS_PATH)/,$(SRCS_FILES))
-
-OBJS = ${SRCS:.cpp=.o}
+SRCS =	main.cpp \
+		Zombie.class.cpp \
+		zombieHorde.cpp
 
 RM = rm -f
 
